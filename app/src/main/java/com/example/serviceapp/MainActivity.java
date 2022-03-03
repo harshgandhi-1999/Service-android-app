@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.Button;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
     private static final String TAG = "MainActivity";
@@ -29,6 +30,7 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this,MyService.class);
         intent.setAction("PLAY_SONG");
         try {
+            Toast.makeText(this, "Playing song", Toast.LENGTH_SHORT).show();
             startService(intent);
         }catch (Exception e){
             Log.e(TAG, "playSong: Error in starting service " + e.getLocalizedMessage() );
@@ -39,6 +41,7 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this,MyService.class);
         intent.setAction("PAUSE_SONG");
         try {
+            Toast.makeText(this, "Song paused", Toast.LENGTH_SHORT).show();
             startService(intent);
         }catch (Exception e){
             Log.e(TAG, "playSong: Error in starting service in pause" + e.getLocalizedMessage() );
@@ -47,6 +50,7 @@ public class MainActivity extends AppCompatActivity {
     private void stopSong(){
         Intent intent = new Intent(this,MyService.class);
         try {
+            Toast.makeText(this, "Song stopped", Toast.LENGTH_SHORT).show();
             stopService(intent);
         }catch (Exception e){
             Log.e(TAG, "playSong: Error in stopping service " + e.getLocalizedMessage() );
