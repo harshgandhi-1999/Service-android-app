@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void playSong(){
         Intent intent = new Intent(this,MyService.class);
-        intent.setAction("PLAY_SONG");
+        intent.setAction(getString(R.string.play_song));
         try {
             Toast.makeText(this, "Playing song", Toast.LENGTH_SHORT).show();
             startService(intent);
@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void pauseSong(){
         Intent intent = new Intent(this,MyService.class);
-        intent.setAction("PAUSE_SONG");
+        intent.setAction(getString(R.string.pause_song));
         try {
             Toast.makeText(this, "Song paused", Toast.LENGTH_SHORT).show();
             startService(intent);

@@ -4,4 +4,8 @@
     <string name="service_to_play_song">Service to play song</string>
     <string name="pause">Pause</string>
     <string name="stop">Stop</string>
+    <string name="play_song">PLAY_SONG</string>
+    <string name="pause_song">PAUSE_SONG</string>
+    <string name="channel_name">Channel Name</string>
+    <string name="channel_description">This is Channel Description</string>
 </resources>
